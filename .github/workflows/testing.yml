@@ -68,6 +68,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
           path: .coverage*
+          name: ${{ matrix.os }}-${{ matrix.python-version }}
 
     - name: Codecov
       if: matrix.os == 'ubuntu-latest'
